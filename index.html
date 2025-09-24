@@ -1,37 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Web de prueba</title>
+    <title>Página Web - Funcionalidades Node.js</title>
 </head>
 <body>
-    <div>
-        <button><a href="formulario-contacto.html">Ir al formulario de contacto</a></button>
-    </div>
-    <div>
-        <h2 id="targetText">Clickear para el cambio de color</h2>
-        <button id="colorButton">Cambiar color</button>
-    </div>
+    <header>
+        <h1>Web Interactiva</h1>
+    </header>
 
-    <div>
-        <button id="toggleButton">Mostrar/Ocultar contenido</button>
-        <p id="hiddenContent">Este contenido puede ser ocultado/mostrado</p>
-    </div>
+    <main>
+        <!-- información de usuario -->
+        <section class="card">
+            <h2>Información del Usuario</h2>
+            <div id="userInfo">
+                <p><strong>Hora actual:</strong> <span id="currentTime"></span></p>
+                <p><strong>Fecha:</strong> <span id="currentDate"></span></p>
+                <p><strong>Contador de visitas:</strong> <span id="visitCounter">0</span></p>
+                <button id="incrementCounter">Incrementar Contador</button>
+            </div>
+        </section>
 
-    <div class="hover-effect">
-        <p>¡Pasa el ratón por aquí!</p>
-    </div>
 
-    <div>
-        <button id="addButton">Añadir elemento</button>
-        <ul id="itemList">
-            <li>Elemento inicial</li>
-        </ul>
-    </div>
+        <!-- interacciones básicas -->
+        <section class="card">
+            <h2>Interacciones Básicas</h2>
+            <div class="interaction-group">
+                <h3 id="targetText">¡Haz clic para cambiar el color!</h3>
+                <button id="colorButton">Cambiar Color</button>
+            </div>
 
+            <div class="interaction-group">
+                <button id="toggleButton">Mostrar/Ocultar Contenido</button>
+                <p id="hiddenContent">Este contenido puede ser ocultado/mostrado</p>
+            </div>
+
+            <div class="interaction-group">
+                <div class="hover-effect">
+                    <p>¡Pasa el ratón por aquí para ver el efecto!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- lista dinámica -->
+        <section class="card">
+            <h2>Lista Dinámica</h2>
+            <div class="list-controls">
+                <button id="addButton">Añadir Elemento</button>
+                <button id="clearButton">Limpiar Lista</button>
+            </div>
+            <ul id="itemList">
+                <li>Elemento inicial - ¡Bienvenido!</li>
+            </ul>
+        </section>
+
+        <!-- Navegación -->
+        <section class="card">
+            <h2>Navegación</h2>
+            <button class="nav-button">
+                <a href="formulario-contacto.html">Ir al Formulario de Contacto</a>
+            </button>
+        </section>
+    </main>
+
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
